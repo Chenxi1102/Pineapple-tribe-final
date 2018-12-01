@@ -28,7 +28,7 @@ shinyServer(function(input, output) {
       colnames(both) <- c("year","New England","Mid-Atlantic","Midwest","South","Mountain West","Pacific")
     }
     both <- melt(both,id="year")
-    ggplot(both,aes(year,value,colour=variable))+geom_line()
+    ggplot(both,aes(year,1-value,colour=variable))+geom_line()
   }) 
   output$tab3 <- renderPlot({
     if(input$age=="small"){
