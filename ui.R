@@ -1,7 +1,7 @@
 #install.packages("shinythemes")
 library(shinythemes)
 library(shiny)
-
+library(markdown)
 # Define UI for application that draws a histogram
 shinyUI(
   navbarPage(
@@ -9,7 +9,10 @@ shinyUI(
     theme = shinytheme("cosmo"),
     ## first tab
     tabPanel(
-      "tab1"
+      "Home page",
+      fluidPage(
+        includeMarkdown("README.md")
+      )
     ),
     ## second tab
     tabPanel(
@@ -21,7 +24,10 @@ shinyUI(
     ),
     ## forth tab
     tabPanel(
-      "tab4"
+      "Summary",
+      fluidPage(
+        includeMarkdown("SUMMARY.md")
+      )
     )
   )
 )
