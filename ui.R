@@ -15,7 +15,6 @@ shinyUI(
       )
     ),
     ## second tab
-    ## third tab
     tabPanel(
       "Divorce",
       fluidPage(
@@ -41,7 +40,7 @@ shinyUI(
         )
       )
     ),
-    ## forth tab
+    ## third tab
     tabPanel(
       "Marriage rate",
       fluidPage(
