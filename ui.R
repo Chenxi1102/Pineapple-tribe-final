@@ -15,29 +15,9 @@ shinyUI(
       )
     ),
     ## second tab
-    tabPanel(
-      "marriage",
-      fluidPage(
-        titlePanel("Marriage Rate"),
-        sidebarLayout(
-          sidebarPanel(
-            radioButtons("select_1", "Select By",
-                         choices = c("Race" = "race",
-                                     "Education_level" = "education",
-                                     "Region" = "region")
-            ),
-            selectInput("select_2", "Select Age",
-                        choices = c("25-34"="1", "35-44"="2", "45-54"="3"))
-          ),
-          mainPanel(
-            plotOutput("contents")
-          )
-        )
-      )
-    ),
     ## third tab
     tabPanel(
-      "divorce",
+      "Divorce",
       fluidPage(
         titlePanel("Divorce Rate"),
         sidebarLayout(
@@ -62,6 +42,32 @@ shinyUI(
       )
     ),
     ## forth tab
+    tabPanel(
+      "Marriage rate",
+      fluidPage(
+        titlePanel("Marriage rate"),
+        sidebarLayout(
+          sidebarPanel(
+            radioButtons(
+              "gender",
+              "Select geneder",
+              choices = list("Male"="male","Female"="female","Both gender"="all")
+            ),
+            radioButtons("select_1", "Select By",
+                         choices = c("Race" = "race",
+                                     "Education level" = "education",
+                                     "Region" = "region")
+            ),
+            selectInput("select_2", "Select Age",
+                        choices = c("25-34"="1", "35-44"="2", "45-54"="3"))
+          ),
+          mainPanel({
+            plotOutput("tab4")
+          })
+        )
+      )
+    ),
+    ## fifth tab
     tabPanel(
       "Summary",
       fluidPage(
