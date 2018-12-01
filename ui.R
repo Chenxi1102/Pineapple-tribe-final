@@ -35,24 +35,28 @@ shinyUI(
     ## third tab
     tabPanel(
       "tab3",
-      sidebarPanel(
-        h2("Divorce Rate"),
-        ## radio buttons
-        radioButtons(
-          "age",
-          label = h3("select age"),
-          choices = list("35 - 44"="small","45 - 54"="big")
-        ),
-        ## select input box
-        selectInput(
-          "filter",
-          label = h3("select category"),
-          choices = list("education","wealth","all")
+      fluidPage(
+        titlePanel("Divorce Rate"),
+        sidebarLayout(
+          sidebarPanel(
+            ## radio buttons
+            radioButtons(
+              "age",
+              "Select age",
+              choices = list("35 - 44"="small","45 - 54"="big")
+            ),
+            ## select input box
+            selectInput(
+              "filter",
+              "Select category",
+              choices = list("education","wealth","all")
+            )
+          ),
+          mainPanel({
+            plotOutput("tab3")
+          })
         )
-      ),
-      mainPanel({
-        plotOutput("tab3")
-      })
+      )
     ),
     ## forth tab
     tabPanel(
