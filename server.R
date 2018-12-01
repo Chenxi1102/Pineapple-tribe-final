@@ -24,6 +24,6 @@ shinyServer(function(input, output) {
       colnames(divorce)=c("year","all")
     }
     divorce <- melt(divorce,id = "year")
-    ggplot(divorce,aes(year,value,colour=variable))+geom_line()
+    ggplot(divorce,aes(year, value,colour=variable))+geom_line()+ylab("divorce rate")
   })
 })
