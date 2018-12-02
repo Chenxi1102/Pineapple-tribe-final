@@ -17,7 +17,7 @@ shinyServer(function(input, output) {
     }
     if(input$filter=="education"){
       divorce <- divorce %>% select(year,3:7)
-      colnames(divorce)=c("year","High school","Some college","Bachelor's degree or more","Bachelor's degree, no graduate degre","Graduate degree")
+      colnames(divorce)=c("year","High school","Some college","Bachelor's degree or more","Bachelor's degree, no graduate degree","Graduate degree")
     }else if(input$filter=="wealth"){
       divorce <- divorce %>% select(year,8:10)
       colnames(divorce)=c("year","poor","mid","rich")
