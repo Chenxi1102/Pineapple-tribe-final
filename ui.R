@@ -16,7 +16,7 @@ shinyUI(
     ),
     ## second tab
     tabPanel(
-      "Divorce",
+      "Divorce rate",
       fluidPage(
         titlePanel("Divorce Rate"),
         sidebarLayout(
