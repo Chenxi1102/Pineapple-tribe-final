@@ -36,8 +36,7 @@ shinyUI(
           ),
           mainPanel(
             tabsetPanel(
-              tabPanel("Plot", plotOutput("tab3")),
-              tabPanel("Summary", verbatimTextOutput("summary1"))
+              tabPanel("Plot", plotOutput("tab3"))
               # tabPanel("Table", tableOutput("table"))
             )
           )
@@ -69,8 +68,7 @@ shinyUI(
           ),
           mainPanel( 
             tabsetPanel(
-            tabPanel("Plot", plotOutput("tab4")),
-            tabPanel("Summary", verbatimTextOutput("summary2"))
+            tabPanel("Plot", plotOutput("tab4"))
             # tabPanel("Table", tableOutput("table"))
           ))
         )

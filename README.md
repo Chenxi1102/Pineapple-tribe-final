@@ -5,7 +5,7 @@ By Yiran Mo, Chenxi Wu, Keyi Zhong and Zac Zhu
 
 ![marriage](flower.jpeg)
 
-**Shiny URL:**
+**Shiny URL:** [Here](https://keyizhong.shinyapps.io/pineapple-tribe-final/)
 
 This app gives you a chance to compare marriage/divorce rate by filter out the factors you want to know more about.
 

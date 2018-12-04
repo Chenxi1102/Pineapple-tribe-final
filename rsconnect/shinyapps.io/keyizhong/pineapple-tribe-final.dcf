@@ -5,8 +5,9 @@ account: keyizhong
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 602316
-bundleId: 1738318
+bundleId: 1738472
 url: https://keyizhong.shinyapps.io/pineapple-tribe-final/
-when: 1543902414.04202
+when: 1543906735.52753
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: animated.R
