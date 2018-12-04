@@ -9,6 +9,7 @@ shinyServer(function(input, output) {
   women <- read.csv("marriage/women.csv",stringsAsFactors = FALSE)
   divorce <- read.csv("marriage/divorce.csv",stringsAsFactors = FALSE)
   source("marriage.R")
+  source("animated.R")
   output$tab3 <- renderPlot({
     if(input$age=="small"){
       divorce <- divorce %>% select(year,4:12)
@@ -37,4 +38,12 @@ shinyServer(function(input, output) {
       marriageRate(both,input)
     }
   })
+  output$tab5 <- renderUI({
+    #if(dir.exists(paste0(input$select_1,"_",age,".gif"))){
+      
+    #}else{
+      animated(both,input)
+    #}
+  })
+  
 })

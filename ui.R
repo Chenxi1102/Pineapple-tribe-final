@@ -68,6 +68,26 @@ shinyUI(
     ),
     ## fifth tab
     tabPanel(
+      "gig",
+      fluidPage(
+        titlePanel("Marriage rate"),
+        sidebarLayout(
+          sidebarPanel(
+            radioButtons("filter2", "Select By",
+                         choices = c("Race" = "race",
+                                     "Education level" = "education",
+                                     "Region" = "region")
+            ),
+            selectInput("age2", "Select Age",
+                        choices = c("25-34"="1", "35-44"="2", "45-54"="3"))
+          ),
+          mainPanel({
+            uiOutput("tab5")
+          })
+        )
+      )
+    ),
+    tabPanel(
       "Summary",
       fluidPage(
         includeMarkdown("SUMMARY.md")
