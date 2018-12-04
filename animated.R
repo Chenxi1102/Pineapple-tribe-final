@@ -23,6 +23,6 @@ animated <- function(both, input) {
     labs(title = "Year: {frame_time}", x = input$filter2, y = "Marriage rate") +
     transition_time(year) +
     ease_aes("linear")
-  animete_p <- animate(p)
+  anime <- animate(p)
   save_animation(anime, paste0(input$filter2, "_", input$age2, ".gif"))
 }

@@ -78,7 +78,7 @@ shinyUI(
     ),
     ## fifth tab
     tabPanel(
-      "Marriage rate",
+      "Time trend",
       fluidPage(
         titlePanel("Marriage rate time trend"),
         sidebarLayout(

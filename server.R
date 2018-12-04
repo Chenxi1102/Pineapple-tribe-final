@@ -30,7 +30,7 @@ shinyServer(function(input, output) {
     divorce <- melt(divorce, id = "year")
     ggplot(divorce, aes(year, value, colour = variable)) + geom_line() + ylab("divorce rate")
   })
-  output$summary1 <- renderText("Over the years, researchers have determined certain factors that put people at higher risk for divorce: marrying young, limited education and income, living together before a commitment to marriage, premarital pregnancy, no religious affiliation, coming from a divorced family, and feelings of insecurity. This plot set intend to test these factors. The plot set displays the time trend of divorce rate based on different catagories. The first sted is to select an age period you would like to explore. Then you can categorize them by your own interests¡ªsuch as education background, wealth or no category. ")
+  output$summary1 <- renderText("Over the years, researchers have determined certain factors that put people at higher risk for divorce: marrying young, limited education and income, living together before a commitment to marriage, premarital pregnancy, no religious affiliation, coming from a divorced family, and feelings of insecurity. This plot set intend to test these factors. The plot set displays the time trend of divorce rate based on different catagories. The first sted is to select an age period you would like to explore. Then you can categorize them by your own interests??such as education background, wealth or no category. ")
   output$tab4 <- renderPlot({
     if (input$gender == "male") {
       marriageRate(men, input)
