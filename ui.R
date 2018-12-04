@@ -68,7 +68,7 @@ shinyUI(
     ),
     ## fifth tab
     tabPanel(
-      "gig",
+      "Marriage rate",
       fluidPage(
         titlePanel("Marriage rate"),
         sidebarLayout(
@@ -82,7 +82,7 @@ shinyUI(
                         choices = c("25-34"="1", "35-44"="2", "45-54"="3"))
           ),
           mainPanel({
-            uiOutput("tab5")
+            imageOutput("tab5")
           })
         )
       )

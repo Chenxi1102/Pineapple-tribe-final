@@ -2,6 +2,7 @@ library(shiny)
 library(reshape2)
 library(dplyr)
 library(ggplot2)
+library(gganimate)
 
 shinyServer(function(input, output) {
   both <- read.csv("marriage/both_sexes.csv",stringsAsFactors = FALSE)
@@ -38,12 +39,15 @@ shinyServer(function(input, output) {
       marriageRate(both,input)
     }
   })
-  output$tab5 <- renderUI({
-    #if(dir.exists(paste0(input$select_1,"_",age,".gif"))){
-      
-    #}else{
+  output$tab5 <- renderImage({
+    if(!dir.exists(paste0("img/",input$filter2,"_",input$age2,".gif"))){
       animated(both,input)
-    #}
+    }
+    return(list(
+      src = paste0(input$filter2,"_",input$age2,".gif"),
+      filetype = "gif",
+      alt = "This is a gif"
+    ))
   })
   
 })
