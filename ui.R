@@ -1,4 +1,4 @@
-#install.packages("shinythemes")
+# install.packages("shinythemes")
 library(shinythemes)
 library(shiny)
 library(markdown)
@@ -25,18 +25,22 @@ shinyUI(
             radioButtons(
               "age",
               "Select age",
-              choices = list("35 - 44"="small","45 - 54"="big")
+              choices = list("35 - 44" = "younger", "45 - 54" = "elder")
             ),
             ## select input box
             selectInput(
               "filter",
               "Select category",
-              choices = list("education","wealth","all")
+              choices = list("education", "wealth", "all")
             )
           ),
-          mainPanel({
-            plotOutput("tab3")
-          })
+          mainPanel(
+            tabsetPanel(
+              tabPanel("Plot", plotOutput("tab3")),
+              tabPanel("Summary", verbatimTextOutput("summary1"))
+              # tabPanel("Table", tableOutput("table"))
+            )
+          )
         )
       )
     ),
@@ -50,19 +54,25 @@ shinyUI(
             radioButtons(
               "gender",
               "Select geneder",
-              choices = list("Male"="male","Female"="female","Both gender"="all")
+              choices = list("Male" = "male", "Female" = "female", "Both gender" = "all")
             ),
             radioButtons("select_1", "Select By",
-                         choices = c("Race" = "race",
-                                     "Education level" = "education",
-                                     "Region" = "region")
+              choices = c(
+                "Race" = "race",
+                "Education level" = "education",
+                "Region" = "region"
+              )
             ),
             selectInput("select_2", "Select Age",
-                        choices = c("25-34"="1", "35-44"="2", "45-54"="3"))
+              choices = c("25-34" = "1", "35-44" = "2", "45-54" = "3")
+            )
           ),
-          mainPanel({
-            plotOutput("tab4")
-          })
+          mainPanel( 
+            tabsetPanel(
+            tabPanel("Plot", plotOutput("tab4")),
+            tabPanel("Summary", verbatimTextOutput("summary2"))
+            # tabPanel("Table", tableOutput("table"))
+          ))
         )
       )
     ),
@@ -70,17 +80,21 @@ shinyUI(
     tabPanel(
       "Marriage rate",
       fluidPage(
-        titlePanel("Marriage rate"),
+        titlePanel("Marriage rate time trend"),
         sidebarLayout(
           sidebarPanel(
             radioButtons("filter2", "Select By",
-                         choices = c("Race" = "race",
-                                     "Education level" = "education",
-                                     "Region" = "region")
+              choices = c(
+                "Race" = "race",
+                "Education level" = "education",
+                "Region" = "region"
+              )
             ),
             selectInput("age2", "Select Age",
-                        choices = c("25-34"="1", "35-44"="2", "45-54"="3"))
+              choices = c("25-34" = "1", "35-44" = "2", "45-54" = "3")
+            )
           ),
+
           mainPanel({
             imageOutput("tab5")
           })
