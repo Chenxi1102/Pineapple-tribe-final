@@ -1,8 +1,8 @@
-# install.packages("shinythemes")
+## install.packages("shinythemes")
 library(shinythemes)
 library(shiny)
 library(markdown)
-# Define UI for application that draws a histogram
+## Define UI for application that draws a histogram
 shinyUI(
   navbarPage(
     title = "Pineapple Tribe",
@@ -11,6 +11,7 @@ shinyUI(
     tabPanel(
       "Home page",
       fluidPage(
+        ## read in READ.md
         includeMarkdown("README.md")
       )
     ),
