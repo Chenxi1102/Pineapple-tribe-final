@@ -36,8 +36,6 @@ shinyServer(function(input, output) {
 ## graph the divorce rate chart    
     ggplot(divorce, aes(year, value, colour = variable)) + geom_line() + ylab("divorce rate")
   })
-  output$note1 <- renderText("As have demonstrated by certain research, factors that may contribute to higher divorce rate includes marrying young, limited education and income, living together before a commitment to marriage, premarital pregnancy, no religious affiliation, coming from a divorced family, and feelings of insecurity. In our dataset, divorce rate is calculated based on different categories: age, education background, wealth and different year. This plot set displays the time trend of divorce rate based on different catagories. The first step is to select an age period you would like to explore. Then you can categorize them by your own interests, such as education background, wealth or no category. ")
-  
 ## if and else statment to filter data
   output$tab4 <- renderPlot({
     if (input$gender == "male") {
@@ -48,8 +46,29 @@ shinyServer(function(input, output) {
       marriageRate(both, input)
     }
   })
-  output$note2 <- renderText("According to the news, the percentage of U.S. adults who are married has reached a ¡°record low¡±. However we are interested in specifically what kind of people are less willingly to get married. This plot set intends to display the change of marriage rate over time by different categories, namely age, gender, race, educational level and region. We can see that much fewer adults in that youthful age group are married nowadays. Education also plays a crucial role in the marriage rate. It seems that young adults may delay marriage to pursue further education.")
-
+  output$note1 <- renderText("As have demonstrated by certain researches, factors that
+                             may contribute to higher divorce rate includes marrying
+                             young, limited education and income, living together before
+                             a commitment to marriage, premarital pregnancy, no religious
+                             affiliation, coming from a divorced family, and feelings of
+                             insecurity. In our dataset, divorce rate is calculated based
+                             on different categories: age, education background, wealth
+                             and different year. This plot set displays the time trend of
+                             divorce rate based on different catagories. The first step
+                             is to select an age period you would like to explore. Then
+                             you can categorize them by your own interests, such as 
+                             education background, wealth or no category.")
+  
+  output$note2 <- renderText("According to recent news, the percentage of U.S. adults 
+                             who are married has reached a â€œrecord lowâ€. However we are
+                             interested in specifically what kind of people are less 
+                             willingly to get married. This plot set intends to display 
+                             the change of marriage rate over time by different categories
+                             , namely age, gender, race, educational level and region. We
+                             can see that much fewer adults in that youthful age group 
+                             are married nowadays. Education also plays a crucial role 
+                             in the marriage rate. It seems that young adults may delay 
+                             marriage to pursue further education.")
 ## creat the gif graph
   output$tab5 <- renderImage(
     return(list(
