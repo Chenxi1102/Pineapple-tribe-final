@@ -7,7 +7,7 @@ library(ggplot2)
 
 ## Define server logic required to draw graphs and chart
 shinyServer(function(input, output) {
-# read the data
+# reeding the data in
   both <- read.csv("marriage/both_sexes.csv", stringsAsFactors = FALSE)
   men <- read.csv("marriage/men.csv", stringsAsFactors = FALSE)
   women <- read.csv("marriage/women.csv", stringsAsFactors = FALSE)
