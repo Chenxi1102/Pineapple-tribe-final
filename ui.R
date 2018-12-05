@@ -37,10 +37,11 @@ shinyUI(
           ),
           mainPanel(
             tabsetPanel(
-              tabPanel("Plot", 
-                       plotOutput("tab3"), 
-                       p("As have demonstrated by certain researches, factors that may contribute to higher divorce rate includes marrying young, limited education and income, living together before a commitment to marriage, premarital pregnancy, no religious affiliation, coming from a divorced family, and feelings of insecurity. In our dataset, divorce rate is calculated based on different categories: age, education background, wealth and different year. This plot set displays the time trend of divorce rate based on different catagories. The first step is to select an age period you would like to explore. Then you can categorize them by your own interests, such as education background, wealth or no category. ")
-                       ), 
+              tabPanel(
+                "Plot",
+                plotOutput("tab3"),
+                p("As have demonstrated by certain researches, factors that may contribute to higher divorce rate includes marrying young, limited education and income, living together before a commitment to marriage, premarital pregnancy, no religious affiliation, coming from a divorced family, and feelings of insecurity. In our dataset, divorce rate is calculated based on different categories: age, education background, wealth and different year. This plot set displays the time trend of divorce rate based on different catagories. The first step is to select an age period you would like to explore. Then you can categorize them by your own interests, such as education background, wealth or no category. ")
+              ),
               tabPanel("Note", textOutput("note"))
             )
           )
@@ -70,14 +71,16 @@ shinyUI(
               choices = c("25-34" = "1", "35-44" = "2", "45-54" = "3")
             )
           ),
-          mainPanel( 
+          mainPanel(
             tabsetPanel(
-            tabPanel("Plot", 
-                     plotOutput("tab4"), 
-                     p("We are interested in specifically what kind of people are less willingly to get married. This plot set intends to display the change of marriage rate over time by different categories, namely age, gender, race, educational level and region. We can see that much fewer adults in that youthful age group are married nowadays. Education also plays a crucial role in the marriage rate. It seems that young adults may delay marriage to pursue further education.")
-                     ), 
-            tabPanel("Note", textOutput("note"))
-          ))
+              tabPanel(
+                "Plot",
+                plotOutput("tab4"),
+                p("We are interested in specifically what kind of people are less willingly to get married. This plot set intends to display the change of marriage rate over time by different categories, namely age, gender, race, educational level and region. We can see that much fewer adults in that youthful age group are married nowadays. Education also plays a crucial role in the marriage rate. It seems that young adults may delay marriage to pursue further education.")
+              ),
+              tabPanel("Note", textOutput("note"))
+            )
+          )
         )
       )
     ),
