@@ -3,7 +3,7 @@
 
 By Yiran Mo, Chenxi Wu, Keyi Zhong and Zac Zhu
 
-![marriage](flower.jpeg)
+![marriage](picture/flower.jpeg)
 
 **Shiny URL:** [How do marriages look like?](https://keyizhong.shinyapps.io/pineapple-tribe-final/)
 

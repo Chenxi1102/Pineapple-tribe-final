@@ -17,3 +17,10 @@ For divorce rate, the data set only has several factors from the list we listed 
 ***Relationship to age, education level, and wealth:***
 
 In general, people who are 45-54 has a higher divorce rate than people who are 35-44. Looking into the factors education and wealth. People who have higher education level and who are richer have lower divorce rate. Interestingly, people who went to/ did not finish college have a lower divorce rate than people who went to some college and is contrary from what we observed about education and divorce rate.
+
+***See also***
+See below the table we use for mariage rate visualizaion in age 25-34: 
+
+![](picture/table.png)
+
+
